@@ -16,6 +16,16 @@ class Communication
         req.params['source'] = @source
         req.params['passphrase'] = 'Kans4s-i$-g01ng-by3-bye'
       end 
-     @loopholes = Loophole.new.call(@response.body)
+     @loopholes = Loophole.new.call(@response.body , @source)
+  end
+  
+  def post_routes (routes)
+    routes.each do |route|
+     @response  = @connection.post do |req|
+        req.url @url
+        req.headers['Content-Type'] = 'application/json'
+        req.body = route.merge(passphrase: 'Kans4s-i$-g01ng-by3-bye').to_json
+      end
+    end
   end
 end 
