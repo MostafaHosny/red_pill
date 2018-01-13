@@ -1,8 +1,8 @@
 class Loophole
 
   def initialize
-  
   end
+  
   require 'zip'
   def call(data , source)
     @content = {}
@@ -12,8 +12,6 @@ class Loophole
         unless entry.directory?
           data = JSON.parse(entry.get_input_stream.read)
           @content[data.keys.first] = data[data.keys.first]
-          byebug
-          puts @content
         end
       end
       @content['routes'].each do | route|
