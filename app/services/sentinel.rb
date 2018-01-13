@@ -3,7 +3,6 @@ class Sentinel
   require 'zip'
 
   def call(data , source)
-    @route = {}
     routes = []
     Zip::File.open_buffer(data) do |zip|
         data = CSV.parse(zip.to_a[1].get_input_stream.read.tr('"',''))

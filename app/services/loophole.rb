@@ -1,8 +1,9 @@
 class Loophole
 
   def initialize
+    @source
   end
-  
+
   require 'zip'
   def call(data , source)
     @content = {}
