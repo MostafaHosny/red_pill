@@ -16,7 +16,7 @@ class Communication
         req.params['source'] = @source
         req.params['passphrase'] = 'Kans4s-i$-g01ng-by3-bye'
       end 
-     @loopholes = Sentinel.new.call(@response.body , @source)
+     @loopholes = Sniffer.new.call(@response.body , @source)
   end
   
   def post_routes (routes)
@@ -27,7 +27,6 @@ class Communication
         req.body = route.merge(passphrase: 'Kans4s-i$-g01ng-by3-bye').to_json
       end
       byebug
-      puts @response
     end
   end
 end 
