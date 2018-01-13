@@ -1,24 +1,30 @@
 # README
+Hello  it's Neo , 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to My project red_pill let's have fun 
+----------------------------------------------
 
-Things you may want to cover:
+-Do you want to test my project ? 
+it's easy now just run this command 
+rspec
+-----------------------------------
 
-* Ruby version
+to make it easy to use i build 3 actions which yosentinelsu can use to 
+get the unreliable data and parse it then send it to your system . 
 
-* System dependencies
+-ooh
 
-* Configuration
+first you need to run the server like this 
 
-* Database creation
+rails server 
 
-* Database initialization
+now using curl or any application which allow you to send requests 
 
-* How to run the test suite
+1-to import sentinels 
+  post /importer/sentinels
 
-* Services (job queues, cache servers, search engines, etc.)
+2-to import sniffers 
+  post /importer/sniffers
 
-* Deployment instructions
-
-* ...
+3-to import loopholes 
+  post /importer/loopholes
